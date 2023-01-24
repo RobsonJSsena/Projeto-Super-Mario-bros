@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--link favicon serve para colocar o icone na Aba da pagina -->
+    <link rel="shortcut icon" href="./src/imagens/favicon.ico" type="image/x-icon">
+    
+    <!--Obs. Para Indentar o codigo(organizar) use as tecla ALt+shif+F-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap" rel="stylesheet">
+     
+    <!--linkando o css com o html-->
+     <link rel="stylesheet" href="./src/css/reset.css">
+     <link rel="stylesheet" href="./src/css/estilo.css">
+     <link rel="stylesheet" href="./src/css/responsivo.css">
+
+    
+     <title>Projeto Super Mario bros - O filme</title>
+</head>
+
+<body>
+   
+     <di class="fundo-video">
+        <video class="video" autoplay loop muted>
+            <source src="./src/Video/video-mario.mp4" type="video/mp4"> <!-- source usado para buscar o local do video-->
+        </video> 
+    </di>
+
+    <header class="cabecalho">
+        <a>
+            <img class="logo" src="./src/imagens/logo-chapeu-mario.png" alt="logo chápeu Mario">
+           
+        </a>
+        <nav class=>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Detalhes</a></li>
+            </ul>
+        </nav>
+    </header> <!--header(cabeçalho)-->
+    
+    <main class="container">
+        <div class="informacoes">
+            <img class="imagem-titulo" src="./src/imagens/titulo.png" alt="Título do Filme ">
+            <p class="descricao">Olá seja bem vindo para conhecer o mundo de Mario Bros e seu irmão Luigi. Ao desobrir um reino encantando de cogumelos, magias, e misterios! governado pela princesa Peach, pórem ameaçado pelo rei dos koopas que faz de tudo para conseguir reinar em todos os lugares. Venha conhecer essa aventura incrível dos nossos hérois</p>
+            <button class="botao-trailer">Veja o trailer</button>
+        </div>
+        <img class="mario" src="./src/imagens/super-mario-chars.png">
+        <img class="mariokart" src="./src/gifs/gif mario kart2.gif">
+        <!--<img class="mariokartselect" src="./src/gifs/gif mario bros2.gif">-->
+        
+       <div class="modal">
+         <div class="conteudo-modal">
+            <span class="fechar-modal">X</span>
+
+        <!--link no trailer removidodo (src="https://www.youtube.com/embed/Cb4WV4aXBpk"), para ser 
+            criado um metodo dentro do javaScript para assim que 
+            fechar o video, parar o audio!-->  
+
+           <iframe id="video" width="560" height="315"src="https://www.youtube.com/embed/Cb4WV4aXBpk"
+            title="Trailer Oficial" frameborder="1" allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+         </div>
+
+       </div>
+  </main> <!--Vai receber o conteudo Principal da pagina-->
+
+<script src="./src/js/index.js"></script>
+</body>
+
+</html>

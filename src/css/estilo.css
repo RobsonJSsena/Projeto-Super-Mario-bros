@@ -1,0 +1,178 @@
+body {
+   font-family: 'Poppins';
+     }
+
+     .cabecalho{
+        display: flex; 
+        justify-content: space-between;
+        padding: 30px;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    .cabecalho .logo {
+        width: 65px; 
+        transition: 0.2s;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: 0.5s all ease-in-out;
+    }
+
+   .cabecalho .logo:hover{
+        background-color: #280106;
+        transform:scale(1.2)  
+    }
+
+
+   .cabecalho .menu {
+       display: flex;
+        align-items: center;
+        height: 100%;
+        transition: 0.5s all ease-in-out;
+    }
+
+    .cabecalho .menu:hover{
+        transform: scale(1.2);
+    }
+    
+    
+    .cabecalho nav li a {
+        font-weight: bold;
+        color: #ffffff;
+        font-size: 25px;
+        padding: 10px 20px;
+        border-radius: 50px;
+        transition: 0.2s;
+    }
+
+    .cabecalho nav li a:hover {
+        background-color: #d5011d; 
+    }
+
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        height: calc(100vh - 132px);
+        padding: 0 30px 30px;
+        
+    }
+
+    .container .imagem-titulo {
+        max-width: 500px;
+        
+   }
+
+   .mariokart{
+    display: flex;
+    align-items: center;
+    position:absolute;
+    width: 80px; /* width Usado para estilizar a largura da imagem ou gid*/
+    top: 25px;   /* top usado pra movimenta a imagem aparti do topo */
+    left: 110px; /* left ou right usados para movimentar a imagem da (left) esquerta a direita! e (right) direita a esquerda*/
+   }
+   
+   
+   .container .descricao {
+    color: #a8adb7;
+    width: 85%;
+    font-size: 18px;
+    margin: 30px 0;
+   }
+
+  .container .botao-trailer {
+    background-color: #ff0021;
+    color: #ffffff;
+    padding: 9.8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;  
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s all ease-in-out;
+
+}
+
+.container .botao-trailer:hover{
+    transform:scale(1.2)
+}
+
+.fundo-video {
+    background-color: red;
+    position: absolute;
+    z-index: -1; /*Para posicionar o vídeo atrás, no eixo Z(efeito de profundidade)*/
+    width: 100vw;/*100% Largura da tela do usuario*/
+    height: 100vh;/*100% Altura da width heighttela do usuario*/
+    overflow: hidden;/*Usado para transborda, usado com hidden vai escoder o transbordo!*/
+    display: flex;
+    justify-content: center;
+}
+
+.fundo-video .video{
+    height: 100vh;
+}
+
+.fundo-video::after {
+   content: "";
+   background-color: #f63d52;
+   height: 100vh;
+   width: 100vw;
+   position: absolute;
+   top: 0;
+   left: 0;
+   /* efeito da cor liner-gradient foi feita no sita CSS Gradient !*/
+   background: rgb(0,0,0);
+   background: linear-gradient(90deg, rgba(0,0,0,0.989233193277311) 0%, rgba(0,0,0,0.7959558823529411) 50%, rgba(8,0,0,1) 100%);
+ }
+
+
+
+ .modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(52,52,50,0.749); /*backgroud-color: rgba() usado para colocar opacidade na cor!*/
+    opacity: 0;/*deixa só a opacidade, pórem não tira o elemento*/
+    visibility: hidden;/*para remover o elemto usa-se o visibility: hidden*/ 
+}
+
+.conteudo-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    border-radius: 5px;
+    gap: 15px;
+
+ }
+
+.fechar-modal {
+    background-color: #ffffff;
+    color: #e42b0b;
+    font-weight: bold;
+    font-size: 20px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+
+.modal iframe{
+    border-radius: 20px;
+    border-width: 0;/*Usado para largura de borda, 0(zero) represenrta nenhuma!*/
+    width: 640px;
+    height: 360px;
+}
+
+.modal.aberto{
+  opacity: 1;
+  visibility: visible;
+}
+
+    
+        
+    
